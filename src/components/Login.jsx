@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import 'C:/Users/Ameen/Mits React/-lightweight/src/styles/log.css'
+
+
 export const Login = () => {
     return (
         <div id="main">
@@ -20,7 +23,7 @@ export const Login = () => {
 
                 <div className="right">
                     <h5>Login</h5>
-                    <p>Don't have an account? <Link to="/Signup"  >Create Your Account</Link> it takes less than a minute</p>
+                    <p>Don't have an account? <Link to="/signup"  >Create Your Account</Link> it takes less than a minute</p>
                     <div className="inputs">
                         <input type="text" placeholder="Username" />
                         <br />

@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page11 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+}
+
+#page11 video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.navbar2 {
+  backdrop-filter: blur(20px);
+  width: 100%;
+  height: 13%;
+  background-color: rgba(0, 0, 0, 0.09);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.navbar2::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 5%;
+  width: 100%;
+  background-color: rgb(0, 255, 0);
+}
+
+.navbar2 > h2 {
+  font-size: 2em;
+  padding-left: 1em;
+}
+
+.nav2-right {
+  width: 50%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+}
+.link:nth-child(3) {
+  background-color: black;
+  padding: 0.5em 1.5em;
+  border-radius: 2rem;
+}
+
+#searchbar {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbar input {
+  width: 100%;
+  padding: 1em;
+  height: 40%;
+  outline: 2px solid grey;
+  outline-offset: -2px;
+  border: 2px solid grey;
+  background-color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+}
+
+#searchbar input:focus {
+  outline-offset: 3px;
+  border-radius: 0.3rem;
+}
+
+.p2-mid {
+  width: 100%;
+  height: calc(100% - 13%);
+  position: relative;
+  display: flex;
+}
+
+.p2-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 3%;
+}
+
+.p2-left h3 {
+  font-size: 1.3vw;
+  color: rgba(255, 255, 255, 0.642);
+}
+.p2-left h1 {
+  color: white;
+  font-size: 6.4vw;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 0 10px #6e6d6d;
+}
+
+.p2-right {
+  width: 30%;
+  height: 90%;
+  position: relative;
+}
+
+.p2-right img {
+  object-fit: cover;
+  height: 100%;
+  width: 1005px;
+}
+
+.btn {
+  width: 50%;
+  border-radius: 5rem;
+  height: 13%;
+  margin-top: 4%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.btn h3 {
+  color: black;
+  position: absolute;
+  left: 10%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.btn i {
+  position: absolute;
+  right: 10%;
+  font-size: 1.5rem;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 255, 0);
+  border-radius: inherit;
+  clip-path: circle(10.7% at 86% 50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover:before {
+  clip-path: circle(69% at 50% 50%);
+}
+
+#page3 {
+  width: 100%;
+  min-height: 100vh;
+}
+.p2-top {
+  width: max-content;
+  height: max-content;
+  margin: 4%;
+  border-radius: 1rem;
+  padding: 1em;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.p2-top h1 {
+  font-size: 4vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.p2-mid2 {
+  width: 96%;
+  display: flex;
+  margin: 2%;
+  position: relative;
+}
+.p2-mid-right {
+  width: 40%;
+  height: 100%;
+}
+
+.p2-mid-left {
+  width: 60%;
+  height: 100%;
+  
+}
+
+.p2-mid-left form {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  margin-top: 5%;
+  position: relative;
+}
+
+.inputs {
+  margin: 5%;
+}
+
+.p2-mid-left form label {
+  font-size: 2vw;
+  margin-left: -0.1em;
+}
+
+.p2-mid-left form label:nth-child(3) {
+  margin-top: 5%;
+}
+.p2-mid-left form input {
+  border-bottom: 2px solid #6e6d6d;
+  width: 70%;
+  outline: none;
+  /* margin-top: 1em; */
+  padding: 1em;
+}
+ 
+
+.inputs:nth-child(4){
+  display: flex;
+  margin-top:10%;
+  text-align: center;
+  gap: 1rem;
+  margin: 0;
+}
+.inputs:nth-child(4) input {
+  width: 90%;
+  padding: 2em;
+  
+}
+
+.inputs:nth-child(4) input::placeholder {
+  text-wrap: wrap;
+}
+
+.btn2 {
+  margin: 15%;
+  display: flex;
+  position: relative;
+  width: 40%;
+  gap: 30%;
+  border-radius: 5rem;
+  height: 13%;
+  margin-top: 9%;
+  margin-left: 4%;
+  display: flex;
+  border: 2px solid black;
+  padding: 1em;
+  position: relative;
+  align-items: center;
+
+}
+
+.btn2 h3 {
+  font-size: 2vw;
+  padding-left: 1em;
+}
+
+.btn2 i {
+
+  font-size: 2vw;
+}

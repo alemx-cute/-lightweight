@@ -1,13 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+    
+    
+
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        lerp: 0.02;
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      function header() {
+
+let header = document.querySelector(".alex");
+let lastscroll = window.scrollY;
+window.addEventListener('scroll', () => {
+    if (lastscroll < window.scrollY) {
+
+        gsap.to(header, {
+            transform: "translate3d(0,-100%,0)",
+            ease: "expo.out",
+            duration: 1,
+
+
+
+        })
+
+
+
+    }
+    else {
+        gsap.to(header, {
+            transform: "translate3d(0,0%,0)",
+            ease: "expo.out",
+            duration: 1,
+
+
+        })
+    }
+
+    lastscroll = window.scrollY
+
+})
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    function updateNavbarBackground() {
+        if (window.scrollY > 10) {
+            gsap.to(".navbar2", {
+                ease: "power3",
+                duration: .8,
+                backgroundColor: "white",
+            });
+
+            gsap.to(".navbar2>h2", {
+                color: "black",
+                duration: 1,
+                ease: "sine.out"
+            })
+
+            gsap.to(".link", {
+                color: "black",
+                ease: "expo.out",
+                duration: 1,
+
+            })
+        } else {
+            gsap.to(".navbar2", {
+                ease: "expo.out",
+                duration: 1,
+                backgroundColor: "transparent",
+            });
+
+            gsap.to(".navbar2>h2", {
+                color: "white",
+                duration: 1,
+                ease: "sine.out"
+            })
+
+            gsap.to(".link", {
+                color: "white",
+                ease: "expo.out",
+                duration: 1,
+
+            })
+        }
+    }
+
+    window.addEventListener('scroll', updateNavbarBackground);
+
+    // Check initial position
+    updateNavbarBackground();
+});
+}
+header();
+    </script>
   </body>
 </html>

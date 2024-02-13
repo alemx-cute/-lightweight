@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Login } from './login';
+
+import 'C:/Users/Ameen/Mits React/-lightweight/src/styles/log.css'
+
 
 export const Signup = () => {
     return (
@@ -22,7 +24,7 @@ export const Signup = () => {
                 <div className="right">
                     <h5>Sign Up</h5>
                     <p>
-                        Already have an account? <Link to="/Login" >Log In to your Account</Link> it takes less than a minute
+                        Already have an account? <Link to="/login" >Log In to your Account</Link> it takes less than a minute
                     </p>
                     <div className="inputs">
                         <input type="text" placeholder="Username" />
